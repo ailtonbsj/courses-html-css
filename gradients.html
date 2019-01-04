@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang='pt-BR'>
+	<head>
+		<meta charset="UTF-8">
+		<title>Pagina</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+		<style type="text/css">
+			div {
+				font-weight: bold;
+				height: 50px;
+				line-height: 25px;
+				margin-bottom: 10px;
+				padding: 5px;
+				text-align: center;
+				width: 220px;
+			}
+			.blue {
+				background-color: #4377FA; /* A cor superior do gradiente como fundo */
+				background-image: linear-gradient(to top, #4377FA, #0537B7);
+			}
+			.reverse-blue {
+				background-image: linear-gradient(to top, #0537B7, #4377FA);
+			}
+			.omg-pink {
+				background-image: linear-gradient(to top right, #FC0050, #FF79A3);
+			}
+			.stops {
+				background-image: linear-gradient(to top, #F5B951 48%, #F2A31C 56%);
+			}
+		</style>
+	</head>
+	<body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<div class='blue'>
+		Um gradiente azul clássico, utilizando 2 tons similares.
+		</div>
+		<div class='reverse-blue'>
+		Uma versão inversa do gradiente azul.
+		</div>
+		<div class='omg-pink'>
+		Combinando "top" e "right" para a direção.
+		</div>
+		<div class='stops'>
+		Utilizando posições específicas para as cores.
+		</div>
+
+	</body>
+</html>
