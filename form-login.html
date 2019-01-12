@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang='pt-BR'>
+	<head>
+		<meta charset="UTF-8">
+		<title>Pagina</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+		<style type="text/css">
+form {
+	margin: 50px auto;
+	width: 140px;
+}
+label {
+	display: none;
+}
+input {
+	display: block;
+}
+button {
+	margin-top: 5px;
+}
+input {
+	border-radius: 3px 3px 0 0;
+	border: 1px solid #999;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+	font-size: 0.8em;
+	padding: 5px;
+	font-weight: bold;
+}
+input[type='password'] {
+	border-radius: 0 0 3px 3px;
+	border-top: none;
+}
+:-webkit-input-placeholder {
+	color: #666;
+	font-style: italic;
+	font-weight: normal;
+}
+:-moz-placeholder {
+	color: #666;
+	font-style: italic;
+	font-weight: normal;
+}
+-ms-input-placeholder {
+	color: #666;
+	font-style: italic;
+	font-weight: normal;
+}
+button {
+	width: 100%;
+}
+.no-placeholder input {
+	border-radius: 3px;
+	border-top: 1px solid #999;
+}
+.no-placeholder label {
+	display: block;
+}
+		</style>
+	</head>
+	<body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<form method='post' action=''>
+			<label for='username'>Usuário</label>
+			<input type='text' id='username' placeholder='Usuário'>
+			<label for='password'>Senha</label>
+			<input type='password' id='password' placeholder='Senha'>
+			<button>Entrar no site</button>
+		</form>
+		<script type="text/javascript">
+		jQuery(function($) {
+			function supportsPlaceholder() {
+				return 'placeholder' in document.createElement('input') &&
+					   'placeholder' in document.createElement('textarea');
+			}
+			if(!supportsPlaceholder()) {
+				$('html').addClass('no-placeholder');
+			}
+		});
+		</script>
+	</body>
+</html>
