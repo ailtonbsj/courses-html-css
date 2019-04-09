@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang='pt-BR'>
+	<head>
+		<meta charset="UTF-8">
+		<title>Pagina</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+		<style type="text/css">
+			.loading {
+				background-color: #666;
+				border-radius: 50%;
+				position: absolute;
+				font: 0/0 serif;
+				animation: pulse 1.5s infinite;
+			}
+
+			@keyframes pulse {
+				0% {
+					width: 0;
+					height: 0;
+					opacity: 1;
+					top: 50px;
+					left: 50px;
+				}
+				100% {
+					width: 30px;
+					height: 30px;
+					opacity: 0;
+					top: 35px;
+					left: 35px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<span class="loading" title="Carregando...">Carregando...</span>
+	</body>
+</html>
