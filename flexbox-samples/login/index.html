@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-image: linear-gradient(to right top, #ec38bc, #da29bd, #c61bbd, #b00dbe, #9803bf, #7d13b4, #6219a7, #471b99, #2c1c7a, #16185b, #0a113c, #03001e);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        main {
+            display: flex;
+            flex-flow: column nowrap;
+            width: 300px;
+        }
+
+        main>img {
+            margin: 10px 0;
+        }
+
+        main>span {
+            margin: 10px 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main span input {
+            padding: 10px 0 10px 30px;
+            border-width: 0;
+            background-color: #d2d3e1ff;
+        }
+
+        main span img {
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 12px;
+        }
+
+        main .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            color: white;
+            font-size: 0.8em;
+            align-items: baseline;
+        }
+
+        main .remember-forgot a {
+            color: #d2d3e1ff;
+            text-decoration: none;
+            font-style: italic;
+        }
+
+        main .remember-forgot input {
+            border-radius: 0;
+        }
+
+        main .btn-login {
+            display: flex;
+            justify-content: center;
+        }
+
+        main .btn-login input {
+            width: 150px;
+            padding: 10px;
+            text-transform: uppercase;
+            background-color: #322f42aa;
+            border: 0;
+            color: white;
+        }
+
+        /* Custom Checkbox */
+        .checkgroup {
+            display: block;
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .checkgroup input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 15px;
+            width: 15px;
+            background-color: #eee;
+        }
+
+        .checkgroup:hover input~.checkmark {
+            background-color: #ccc;
+        }
+
+        .checkgroup input:checked~.checkmark {
+            background-color: #0a113c;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .checkgroup input:checked~.checkmark:after {
+            display: block;
+        }
+
+        .checkgroup .checkmark:after {
+            left: 5px;
+            top: 2px;
+            width: 3px;
+            height: 7px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <img src="user.svg" alt="user-icon" />
+        <span>
+            <img src="user-icon.svg" alt="" />
+            <input type="text" name="username" id="username" placeholder="Username">
+        </span>
+        <span>
+            <img src="lock-icon.svg" alt="" />
+            <input type="password" name="password" id="password" placeholder="Password">
+        </span>
+        <div class="remember-forgot">
+            <span>
+                <label class="checkgroup" for="remember">Remember me
+                    <input type="checkbox" name="remember" id="remember">
+                    <span class="checkmark"></span>
+                </label>
+            </span>
+            <a href="#">Forgot password?</a>
+        </div>
+        <div class="btn-login">
+            <input type="submit" value="Login" />
+        </div>
+    </main>
+</body>
+
+</html>

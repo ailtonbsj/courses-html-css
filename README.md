@@ -6,6 +6,15 @@
 
 Source code repository of projects made in HTML and CSS courses through video classes or books.
 
+## Flexbox CSS Examples
+![](https://img.shields.io/badge/status-in%20progress-blue)
+
+> Folder: flexbox-samples
+
+Some examples made by myself of flexbox layout.
+
+Creator: José Ailton
+
 ## HTML5 e CSS3: Domine a web do futuro
 ![](https://img.shields.io/badge/status-completed-brightgreen)
 
