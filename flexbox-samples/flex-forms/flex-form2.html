@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexForm</title>
+    <style>
+        :root {
+            --width: 60vw;
+            --height: 60vh;
+
+            --field-width: 150px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: var(--width);
+            height: var(--height);
+            margin: calc((100vh - var(--height)) / 2) calc((100vw - var(--width)) / 2);
+            background-color: rgb(37, 38, 112);
+
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+
+        .container .group {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+
+            flex: 1 1 var(--field-width);
+        }
+
+        .container .ocupy2 {
+            flex-basis: calc(2 * var(--field-width));
+        }
+
+        .container .ocupy3 {
+            flex-basis: calc(3 * var(--field-width));
+        }
+
+        .container .ocupy {
+            flex-basis: calc(5 * var(--field-width));
+        }
+
+        .for-first {
+            order: -1;
+        }
+
+        .container .group input {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="group">
+            <label for="field1">field 1</label>
+            <input type="text" id="field1" placeholder="field 1">
+        </div>
+        <div class="group ocupy2">
+            <label for="field2">field 2</label>
+            <input type="text" id="field2" placeholder="field 2">
+        </div>
+        <div class="group">
+            <label for="field3">field 3</label>
+            <input type="text" id="field3" placeholder="field 3">
+        </div>
+        <div class="group">
+            <label for="field4">field 4</label>
+            <input type="text" id="field4" placeholder="field 4">
+        </div>
+        <div class="group">
+            <label for="field5">field 5</label>
+            <input type="text" id="field5" placeholder="field 5">
+        </div>
+    </div>
+</body>
+
+</html>

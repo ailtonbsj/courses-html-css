@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexForm</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            --width: 60vw;
+            --height: 60vh;
+            width: var(--width);
+            height: var(--height);
+            margin: calc((100vh - var(--height)) / 2) calc((100vw - var(--width)) / 2);
+            background-color: rgb(37, 38, 112);
+
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+        .container input {
+            flex: 1 1 250px;
+        }
+
+        #field2 {
+            flex-basis: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" id="field1" placeholder="field 1">
+        <input type="text" id="field2" placeholder="field 2">
+        <input type="text" id="field3" placeholder="field 3">
+        <input type="text" id="field4" placeholder="field 4">
+        <input type="text" id="field5" placeholder="field 5">
+    </div>
+</body>
+
+</html>
